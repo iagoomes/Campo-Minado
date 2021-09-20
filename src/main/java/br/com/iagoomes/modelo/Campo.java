@@ -75,7 +75,7 @@ public class Campo {
         minado = true;
     }
 
-    public boolean isMinado(){
+    public boolean isMinado() {
         return minado;
     }
 
@@ -97,6 +97,10 @@ public class Campo {
 
     public int getColuna() {
         return coluna;
+    }
+
+    void setAberto(boolean aberto) {
+        this.aberto = aberto;
     }
 
     boolean objetivoAlcacado() {
@@ -122,9 +126,9 @@ public class Campo {
             return "*";
         } else if (aberto && minasNaVizinhanca() > 0) {
             return Long.toString(minasNaVizinhanca());
-        }else if (aberto){
+        } else if (aberto) {
             return " ";
-        }else {
+        } else {
             return "?";
         }
 
